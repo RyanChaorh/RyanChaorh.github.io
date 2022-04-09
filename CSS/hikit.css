@@ -1,0 +1,267 @@
+
+.nav-item a{
+	color: #000000;
+	font-size: 18px;
+	font-family: Tahoma, Geneva, sans-serif;
+
+} 
+
+
+.nav-item a:hover{
+	color: #659C7E;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.details ul{
+	list-style: none;
+	list-style-type: none;
+	grid-template-columns: calc(33.333% - 16px) 66.667%;
+    grid-column-gap: 16px;
+    align-items: baseline;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+
+}
+
+.details li {
+    line-height: 1.5em;
+    
+}
+
+
+.list-label {
+    font-weight: 700;
+    color: #71798f;
+} 
+
+.list-info li{
+	display: inline;
+}
+
+h5 a {
+	color: #727272;
+	
+}
+
+
+
+h5 a:hover{
+	
+	color: #727272;
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+.col-lg-12 h4{
+	font-size: 16px;
+	margin-left:2%
+}
+
+.col-lg-12 h4 a{
+	color: #99E3BA;
+}
+
+.email_claim{
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+.email-greet{
+	color: white;
+	opacity: 90%;
+	
+}
+
+.email{
+	
+}
+
+.claim{
+	color: white;
+	opacity: 60%;
+	
+}
+
+
+
+.col-lg-6 img{
+	width: 100%;
+	
+	padding: 0;
+}
+
+.col-lg-6 h5{
+	line-height: 1.5em
+}
+
+.col-lg-12 h5{
+	line-height: 1.5em
+}
+
+.social_media{
+	width: 50%;
+	float: right;
+	
+}
+
+
+.ins{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right: 3%;
+	
+}
+
+.fac{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right: 1%;
+	
+}
+
+.twi{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right:1%;
+}
+
+.social_media img{
+	width: 100%
+	height: auto;
+}
+
+.bg{
+	background-color: #F1F1F1;
+	margin-top: 2vh;
+	padding-top: 2vh;
+	padding-bottom: 3vh;
+}
+.words{
+	margin: auto;
+}
+.words h5{
+	font-size: 2vh;
+	font-weight: 600;
+}
+
+.h_name{
+	font-size: 100%;
+	opacity: 67%;
+	font-weight: 600;
+
+	margin-top: 2vh;
+}
+
+.space{
+	opacity: 0%;
+}
+
+.h_content{
+	font-size: 90%;
+	font-weight: 400;
+}
+
+.h_content ul li {
+	line-height: 1.5em;
+
+}
+
+.h_content ul li span{
+	font-weight: 700;
+}
+
+.flow img{
+	width: 100%;
+}
+
+.arch img{
+	width: 100%;
+}
+
+.bg .proto img{
+	width: 100%;
+	padding-bottom: 1rem;
+}
+
+.mock img{
+	width: 100%;
+}
+
+.brainstorm img{
+	width: 80%;
+}
+
+.col-lg-4 img{
+	width: 100%;
+}
+
+.icons img{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.adv{
+	color:#F49100;
+	font-weight: 700; 
+}
+
+.disadv{
+	color:#7CCA62;
+	font-weight: 700; 
+ 
+}
+
+.hid{
+	opacity: 0%;
+}
+
+.col-lg-12 img{
+	width: 100%;
+}
+
+.col-lg-3 img{
+	width: 100%;
+}
+
+.cVer{
+	margin-top: 3rem;
+}
+
+.icons{
+	padding-top: 0;
+	margin-top: -0.5rem;
+}
+
+.bold{
+	font-weight: 600;
+}
+
+.bds img{
+	width: 40%;
+	text-align: right;
+
+}
+
+.descri{
+	margin-top: 2rem;
+}
+
+.models img{
+	margin-top: 0.5rem;
+}
+
+.mockup img{
+	width: 100%;
+	padding-top: 1rem;
+}

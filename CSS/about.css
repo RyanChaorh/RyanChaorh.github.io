@@ -1,0 +1,186 @@
+body{
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+.nav-item a{
+	color: #000000;
+	font-size: 18px;
+
+} 
+
+
+.nav-item a:hover{
+	color: #659C7E;
+}
+
+.button {
+	border-radius: 10px;
+    background-color: #659C7E; /* Green */
+    border: none;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white; 
+    color: #659C7E; 
+    border: 2px solid #659C7E;
+}
+
+.button1:hover {
+    background-color: #659C7E;
+    
+}
+
+.button1 a{
+	color: #659C7E;
+}
+
+.button1 a:link{
+	color: #659C7E;
+	text-decoration: none;
+
+}
+
+.button1 a:hover{
+	color: #ffffff;
+}
+
+h4{
+	font-size: 16px;
+	line-height: 30px;
+}
+
+h4 a{
+	color: #659C7E;
+}
+
+h4 a:hover{
+	
+	color: #619679;
+	
+}
+
+
+h5{
+	font-size: 16px;
+	
+}
+
+h5 a{
+	color: #659C7E;
+}
+
+h5 a:hover{
+	
+	color: #619679;
+	
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+
+
+
+.mail_claim h5{
+	font-size: 16px;
+	margin-left: 2%
+
+}
+
+.email_claim h5 a{
+	color: #99E3BA;
+	
+}
+
+.email_claim{
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+.email-greet{
+	color: white;
+	opacity: 90%;
+	
+}
+
+.email{
+	
+}
+
+.claim{
+	color: white;
+	opacity: 60%;
+	
+}
+.col-lg-6 img{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 0;
+}
+
+
+
+.social_media{
+	
+	
+}
+
+.ins{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right: 3%;
+	
+}
+
+.fac{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right: 1%;
+	
+}
+
+.twi{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right:1%;
+}
+
+.social_media img{
+	width: 100%
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

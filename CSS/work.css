@@ -1,0 +1,95 @@
+body{
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.nav-item a{
+	color: #000000;
+	font-size: 18px;
+
+} 
+
+
+.nav-item a:hover{
+	color: #659C7E;
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+
+
+.col-lg-12 h5{
+	font-size: 16px;
+	margin-left: 2%
+}
+
+.col-lg-12 h5 a{
+	color: #99E3BA;
+}
+
+.email_claim{
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+.email-greet{
+	color: white;
+	opacity: 90%;
+	
+}
+
+.email{
+	
+}
+
+.claim{
+	color: white;
+	opacity: 60%;
+	
+}
+
+
+
+.col-lg-6 img{
+	width: 100%;
+	
+	padding: 0;
+}
+
+.social_media{
+	width: 50%;
+	float: right;
+	
+}
+
+.ins{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right: 3%;
+	
+}
+
+.fac{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right: 1%;
+	
+}
+
+.twi{
+	width: 2.7em;
+	height: auto;
+	float: right;
+	margin-right:1%;
+}
+
+.social_media img{
+	width: 100%
+	height: auto;
+}
