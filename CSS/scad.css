@@ -94,8 +94,7 @@ h5 a:hover{
 
 .col-lg-6 img{
 	width: 100%;
-	
-	padding: 0;
+	margin-top: 1rem;
 }
 
 .social_media{
@@ -134,4 +133,29 @@ h5 a:hover{
 .social_media img{
 	width: 100%
 	height: auto;
+}
+
+.fot{
+	background-color: #000;
+
+	height: 10rem;
+
+	margin-top: 5rem;
+	padding-top: 0;
+}
+
+
+.footer {
+	font-family:Tahoma, Geneva, sans-serif; 
+	padding-top: 2rem;
+	/*margin-bottom: 2rem;*/
+}
+
+.footer h5{
+	font-size: 1rem;
+}
+
+
+.ava img{
+	width: 80%;
 }
