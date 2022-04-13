@@ -141,9 +141,10 @@ h5 a:hover {
 
 .fot {
     background-color: #000;
-    height: 10rem;
-    margin-top: 5rem;
-    padding-top: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 3rem;
 }
 
 .footer {
