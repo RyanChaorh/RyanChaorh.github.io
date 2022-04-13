@@ -160,3 +160,11 @@ h5 a:hover {
 .ava img {
     width: 80%;
 }
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.greet {
+    margin-top: 5.5rem;
+}

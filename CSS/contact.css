@@ -1,94 +1,86 @@
-body{
-    font-family:Tahoma, Geneva, sans-serif;
+body {
+    font-family: Tahoma, Geneva, sans-serif;
 }
 
-.nav-item a{
+.nav-item a {
     color: #000000;
     font-size: 18px;
+}
 
-} 
-
-
-.nav-item a:hover{
+.nav-item a:hover {
     color: #659C7E;
 }
 
-.header{
-	height: 100px;
-	padding-top: 20px;
+.header {
+    height: 100px;
+    padding-top: 20px;
 }
 
-
-
-
-a.navbar-brand{
-	float: left;
-	color: #000000;
+a.navbar-brand {
+    float: left;
+    color: #000000;
 }
 
-a.nav-link:link{
-  	color: #000000; 
-  	font-size: 18px; 
-  	font-family:Tahoma, Geneva, sans-serif;
+a.nav-link:link {
+    color: #000000;
+    font-size: 18px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 
-a.nav-link:visited{
-
+a.nav-link:hover {
+    color: #659C7E;
 }
-
-a.nav-link:hover{
-	color: #659C7E;
-}
-
-
 
 .button {
-	width: 20%;
-	height: 45px;
-	float: right;
-	border-radius: 5px;
-    background-color: #659C7E; /* Green */
+    width: 20%;
+    height: 45px;
+    float: right;
+    border-radius: 5px;
+    background-color: #659C7E;
+    /* Green */
     border: none;
     color: white;
-    text-align:center;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
 .button2 {
-    background-color: #659C7E; 
-    color: white; 
+    background-color: #659C7E;
+    color: white;
     border: 2px solid #659C7E;
 }
 
-.arrow{
-	
-}
-
-.twi{
-    width: 2.7em;
-    height: auto;
-    float: left;
-    margin-left:1%;
-}
-
-.fac{
+.twi {
     width: 2.7em;
     height: auto;
     float: left;
     margin-left: 1%;
-    
 }
-.ins{
+
+.fac {
     width: 2.7em;
     height: auto;
     float: left;
     margin-left: 1%;
-    
 }
 
+.ins {
+    width: 2.7em;
+    height: auto;
+    float: left;
+    margin-left: 1%;
+}
 
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.greet {
+    margin-top: 5.5rem;
+}

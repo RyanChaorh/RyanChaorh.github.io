@@ -1,120 +1,108 @@
-body{
-	font-family:Tahoma, Geneva, sans-serif;
+body {
+    font-family: Tahoma, Geneva, sans-serif;
 }
 
-.nav-item a{
-	color: #000000;
-	font-size: 18px;
-
-} 
-
-
-.nav-item a:hover{
-	color: #659C7E;
+.nav-item a {
+    color: #000000;
+    font-size: 18px;
 }
 
-.container-fluid{
+.nav-item a:hover {
+    color: #659C7E;
+}
+
+.container-fluid {
     padding-right: 0px;
     padding-left: 0px;
 }
 
-
-
-
-.col-lg-12 h5{
-	font-size: 16px;
-	margin-left: 2%
+.col-lg-12 h5 {
+    font-size: 16px;
+    margin-left: 2%
 }
 
-.col-lg-12 h5 a{
-	color: #99E3BA;
+.col-lg-12 h5 a {
+    color: #99E3BA;
 }
 
-.email_claim{
-	width: 50%;
-	height: auto;
-	float: left;
+.email_claim {
+    width: 50%;
+    height: auto;
+    float: left;
 }
 
-.email-greet{
-	color: white;
-	opacity: 90%;
-	
+.email-greet {
+    color: white;
+    opacity: 90%;
 }
 
-.email{
-	
+.email {}
+
+.claim {
+    color: white;
+    opacity: 60%;
 }
 
-.claim{
-	color: white;
-	opacity: 60%;
-	
+.col-lg-6 img {
+    width: 100%;
+    padding: 0;
 }
 
-
-
-.col-lg-6 img{
-	width: 100%;
-	
-	padding: 0;
+.social_media {
+    width: 50%;
+    float: right;
 }
 
-.social_media{
-	width: 50%;
-	float: right;
-	
+.ins {
+    width: 2.7em;
+    height: auto;
+    float: right;
+    margin-right: 3%;
 }
 
-.ins{
-	width: 2.7em;
-	height: auto;
-	float: right;
-	margin-right: 3%;
-	
+.fac {
+    width: 2.7em;
+    height: auto;
+    float: right;
+    margin-right: 1%;
 }
 
-.fac{
-	width: 2.7em;
-	height: auto;
-	float: right;
-	margin-right: 1%;
-	
+.twi {
+    width: 2.7em;
+    height: auto;
+    float: right;
+    margin-right: 1%;
 }
 
-.twi{
-	width: 2.7em;
-	height: auto;
-	float: right;
-	margin-right:1%;
+.social_media img {
+    width: 100% height: auto;
 }
 
-.social_media img{
-	width: 100%
-	height: auto;
+.fot {
+    background-color: #000;
+    height: 10rem;
+    margin-top: 5rem;
+    padding-top: 0;
 }
-
-.fot{
-	background-color: #000;
-
-	height: 10rem;
-
-	margin-top: 5rem;
-	padding-top: 0;
-}
-
 
 .footer {
-	font-family:Tahoma, Geneva, sans-serif; 
-	padding-top: 2rem;
-	/*margin-bottom: 2rem;*/
+    font-family: Tahoma, Geneva, sans-serif;
+    padding-top: 2rem;
+    /*margin-bottom: 2rem;*/
 }
 
-.footer h5{
-	font-size: 1rem;
+.footer h5 {
+    font-size: 1rem;
 }
 
+.ava img {
+    width: 80%;
+}
 
-.ava img{
-	width: 80%;
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.greet {
+    margin-top: 5.5rem;
 }

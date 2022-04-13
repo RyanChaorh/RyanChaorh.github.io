@@ -1,7 +1,6 @@
-body{
-	font-family:Tahoma, Geneva, sans-serif;
+body {
+    font-family: Tahoma, Geneva, sans-serif;
 }
-
 
 .landing {
     width: 100%;
@@ -11,242 +10,215 @@ body{
     transition: 0.5s background ease-in-out, 0.5s opacity ease-in-out;
 }
 
-.landing-top{
-	width: 100%;
-	height: 100vh;
-	
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	position: relative;
-	top: 0;
-	margin: 0;
-
+.landing-top {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    margin: 0;
 }
 
-.landing-logo{
-	width: 50%;
-	height: 100vh;
-	align-self:stretch;
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	float: left;
+.landing-logo {
+    width: 50%;
+    height: 100vh;
+    align-self: stretch;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    float: left;
 }
 
-.image-bottom{
-	align-self: stretch;
+.image-bottom {
+    align-self: stretch;
 }
 
-.landing-intro{
-	widows: 50%;
-	height: 100vh;
-
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	position: relative;
+.landing-intro {
+    widows: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
 }
+
 
 /* background-color: #F3C788 */
 
+.nav-item a {
+    color: #000000;
+    font-size: 18px;
+}
 
-.nav-item a{
-	color: #000000;
-	font-size: 18px;
-
-} 
-
-
-.nav-item a:hover{
-	color: #659C7E;
+.nav-item a:hover {
+    color: #659C7E;
 }
 
 .button {
-	border-radius: 10px;
-    background-color: #659C7E; /* Green */
+    border-radius: 10px;
+    background-color: #659C7E;
+    /* Green */
     border: none;
-    
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-
 }
 
 .button1 {
-    background-color: white; 
-    color: #659C7E; 
+    background-color: white;
+    color: #659C7E;
     border: 2px solid #659C7E;
 }
 
 .button1:hover {
     background-color: #659C7E;
-    
 }
 
-.button1 a{
-	color: #659C7E;
+.button1 a {
+    color: #659C7E;
 }
 
-.button1 a:link{
-	color: #659C7E;
-	text-decoration: none;
-
+.button1 a:link {
+    color: #659C7E;
+    text-decoration: none;
 }
 
-.button1 a:hover{
-	color: #ffffff;
+.button1 a:hover {
+    color: #ffffff;
 }
 
-.card-text h1{
-	font-size: 1em;
-	color: #000000;
-	opacity: 48%;
+.card-text h1 {
+    font-size: 1em;
+    color: #000000;
+    opacity: 48%;
 }
 
-.card-text h2{
-	font-size: 1.6em;
-	font-weight: bold;
+.card-text h2 {
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 .card-text p {
-	width: 60vw;
+    width: 60vw;
 }
 
-.col-lg-6{
-	padding-top: 10%;
+.col-lg-6 {
+    padding-top: 10%;
 }
 
 .col-lg-6 h1 {
-	font-size: 1em;
-	color: #000000;
-	opacity: 48%;
-	
+    font-size: 1em;
+    color: #000000;
+    opacity: 48%;
 }
 
 .col-lg-6 h2 {
-	font-size: 1.6em;
-	font-weight: bold;
-	
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
-.col-lg-6 p {
-	
-}
-
-.container .row{
-	margin-top: 
-}
-
-.container-fluid{
+.container-fluid {
     padding-right: 0px;
     padding-left: 0px;
 }
 
-
-
-
-
-.col-lg-12 h5{
-	font-size: 16px;
-	margin-left: 2%
+.col-lg-12 h5 {
+    font-size: 16px;
+    margin-left: 2%
 }
 
-.col-lg-12 h5 a{
-	color: #99E3BA;
+.col-lg-12 h5 a {
+    color: #99E3BA;
 }
 
-.email_claim{
-	width: 50%;
-	height: auto;
-	float: left;
+.email_claim {
+    width: 50%;
+    height: auto;
+    float: left;
 }
 
-.email-greet{
-	color: white;
-	opacity: 90%;
-	
+.email-greet {
+    color: white;
+    opacity: 90%;
 }
 
-.email{
-	
+.claim {
+    color: white;
+    opacity: 60%;
 }
 
-.claim{
-	color: white;
-	opacity: 60%;
-	
+.col-lg-6 img {
+    width: 100%;
+    padding: 0;
 }
 
-
-
-.col-lg-6 img{
-	width: 100%;
-	
-	padding: 0;
+.social_media {
+    width: 50%;
+    float: right;
 }
 
-.social_media{
-	width: 50%;
-	float: right;
-	
+.ins {
+    width: 2.7em;
+    height: auto;
+    float: right;
+    margin-right: 3%;
 }
 
-.ins{
-	width: 2.7em;
-	height: auto;
-	float: right;
-	margin-right: 3%;
-	
+.fac {
+    width: 2.7em;
+    height: auto;
+    float: right;
+    margin-right: 1%;
 }
 
-.fac{
-	width: 2.7em;
-	height: auto;
-	float: right;
-	margin-right: 1%;
-	
+.twi {
+    width: 2.7em;
+    height: auto;
+    float: right;
+    margin-right: 1%;
 }
 
-.twi{
-	width: 2.7em;
-	height: auto;
-	float: right;
-	margin-right:1%;
+.social_media img {
+    width: 100%;
+    height: auto;
 }
 
-.social_media img{
-	width: 100%
-	height: auto;
+.fot {
+    background-color: #000;
+    height: 10rem;
+    margin-top: 5rem;
+    padding-top: 0;
 }
-
-
-.fot{
-	background-color: #000;
-
-	height: 10rem;
-
-	margin-top: 5rem;
-	padding-top: 0;
-}
-
 
 .footer {
-	font-family:Tahoma, Geneva, sans-serif; 
-	padding-top: 2rem;
-	/*margin-bottom: 2rem;*/
+    font-family: Tahoma, Geneva, sans-serif;
+    padding-top: 2rem;
+    /*margin-bottom: 2rem;*/
 }
 
-.footer h5{
-	font-size: 1rem;
+.footer h5 {
+    font-size: 1rem;
 }
 
+.ava img {
+    width: 80%;
+}
 
-.ava img{
-	width: 80%;
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.card {
+    width: 100%;
+    border: 0px;
+    margin-top: 5.5rem;
+    font-family: Tahoma, Geneva, sans-serif;
 }
