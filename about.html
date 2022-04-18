@@ -37,12 +37,28 @@
         </div>
     </nav>
 
+    <progress id="content_progress" class="fixed-top" value="0"></progress>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var winHeight = window.innerHeight,
+                docHeight = document.documentElement.scrollHeight,
+                progressBar = document.querySelector('#content_progress');
+            progressBar.max = docHeight - winHeight;
+            progressBar.value = window.scrollY;
+
+            document.addEventListener('scroll', function() {
+                progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+                progressBar.value = window.scrollY;
+            });
+        });
+    </script>
+
     <div class="container">
         <div class="greet">
             <h2 style="font-family:Tahoma, Geneva, sans-serif">Hi, I am Runhao Chao. You can call me Ryan Chao!</h2>
         </div>
 
-        <div class="row" style="margin-top: 8%">
+        <div class="row">
             <div class="col-lg-6 ava">
                 <img src="./image/Me.jpg">
             </div>
