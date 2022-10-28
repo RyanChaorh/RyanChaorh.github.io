@@ -1,0 +1,327 @@
+$color_grey: #F3F4F6
+$color_white: #fcfcfc
+$color_black: #000000
+$color_green_light: #C8E5D5
+$color_green_dark: #4A9E46
+$color_blue_light: #E8F1F3
+$color_yellow_light: #FFE87D
+$color_yellow_dark: #FFD233
+$nav_padding: 5vw
+$border_radius:0
+$work_padding: 5%
+
+    
+*
+    font-family: "Berkeley Mono"
+    h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+        font-weight: bold   
+    position: relative
+
+    h5
+        font-size: 1.2rem
+        font-weight: 700
+    
+    h2 
+        font-size: 2rem
+        font-weight: 600
+
+    p
+        font-size: 1rem
+
+    margin: 0
+    padding: 0
+
+//debug
+*
+    // border: solid 1px $color_green_light
+    header
+        // display: none
+
+hr
+    color: $color_white
+    height: 3px
+
+html,body
+    margin: 0
+    padding: 0
+    -webkit-text-size-adjust: 100%
+
+    background-color: $color_black
+    
+//-----------------------------    
+
+header.jumbotron
+    .container-fluid
+        width: 100vw
+        height: 100vh
+        // background-color: rgba($color_black,0.1)
+        color: $color_white
+        
+        display: flex
+        justify-content: center
+        flex-direction: column
+        z-index: 1
+  
+
+iframe
+    position: absolute
+    width: 100vw
+    height: 100vh
+    
+    border: none
+    z-index: 0
+    
+    
+
+.landing_intro
+    padding-left: 10vw
+    padding-right: 10vw
+    display: inline-block
+    margin-top: 30vh
+
+    // background-color: rgba($color_white,0.3 )
+    
+    h4
+        font-size: 15px
+        font-weight: 400
+        
+
+    h1
+        font-size: 2.5rem
+        text-shadow: 10px 10px 30px $color_white 
+
+.scroll
+    margin-top: 20px
+
+//-----------------------------   
+
+.nav-bg
+    background-color: rgba($color_white, 0.2)
+    backdrop-filter: blur(10px)
+    transition: 0.3s
+
+.onOff
+    opacity: 0
+    transition: 0.3s
+    width: 0
+
+
+
+.navbar-brand
+    padding-left: $nav_padding
+    img
+        width: 60px
+        height: auto
+
+.list
+    img
+        width: 40px
+        height: auto
+        
+
+.navbar-nav
+    margin-right: $nav_padding
+
+.nav-item 
+    a 
+        color: $color_black
+        font-size: 20px
+
+
+.nav-item 
+    a:hover 
+        color: $color_white
+
+       
+
+.button
+    border-radius: 10px
+    background-color: $color_green_dark
+    /* Green */
+    border: none
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 18px
+    -webkit-transition-duration: 0.4s
+    /* Safari */
+    transition-duration: 0.4s
+    cursor: pointer
+
+//-----------------------------       
+    
+#content_progress 
+    position: fixed
+    width: 100%
+    height: 0.1rem
+    top: 4.6rem
+    border: 0
+    background-color: transparent
+    appearance: none
+    color: $color_white
+    opacity: 0.5
+
+
+#content_progress::-webkit-progress-bar 
+    background-color: rgba($color_white, 0.7)
+
+
+#content_progress::-webkit-progress-value 
+    background-color: $color_green_dark
+
+//-----------------------------   
+
+.row,.col-md-12,.col-md-6
+    margin: 0
+    padding: 0
+
+.container
+    width: 100%
+    height: 100%
+    
+
+.banner
+    width: 100%
+    height: auto 
+    padding-top: 50px
+    padding-bottom: 50px
+    
+
+.pic
+    width: 100%
+    height: auto
+    border-radius: $border_radius
+    
+.text
+    padding-top: 20px
+    color: $color_white
+
+.checkBtn
+    background-color: $color_white
+    border: solid 1px $color_green_dark
+    padding: 10px 20px
+    
+    border-radius: $border_radius
+
+    color: $color_black
+    text-decoration: none
+    transition: 0.3s
+
+    &:hover
+        background-color: $color_green_dark
+        color: $color_white
+        transition: 0.3s
+
+//----------------------------
+
+#intro
+    background-color: $color_white
+    color: $color_black
+    display: flex
+    align-items: center
+    padding: 40px 0
+    
+
+    h2
+        padding: 20px 0 20px 40px
+    
+    .col-lg-4
+        padding: 40px
+        // border: solid 1px $color_black
+        
+        .intro_img
+            width: 60px
+            height: auto
+
+        .intro_text
+            padding-top: 40px
+
+        
+
+
+//----------------------------
+
+
+section
+    width: 100%
+    // padding-right: 20px
+    .cover_img
+        margin: 0
+        padding: $work_padding
+        
+        .cover
+            width: 100%
+            border-radius: $border_radius
+    
+    .cover_text
+        margin: 0
+        padding: $work_padding
+        display: flex
+        align-items: center
+
+        h2
+            padding: 20px 0
+        
+//---------------------------
+.mouseCircle
+    position: absolute
+    width: 1.5rem
+    height: 1.5rem
+    border-radius: 50%
+    z-index: 1000
+    mix-blend-mode: lighten
+
+    border: solid 1px $color_white
+
+//----------------------------------
+footer
+    color: $color_white
+    display: flex
+    padding: 2rem 0
+
+    a
+        text-decoration: none
+        color: $color_white
+        &:hover
+            color: $color_green_light
+
+    .container-fluid
+        display: flex
+        
+        .footer_text,.social_media
+            flex: 4
+        
+        .cutLine
+            width: 0.1px
+            height: 5rem
+            border: solid 0.1px $color_white 
+
+        .footer_text
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            padding-right: $work_padding*0.8
+            
+            .email_greet,.claim
+                color: rgba($color_white,0.5)
+                span
+                    color: $color_yellow_light
+
+        .social_media
+            display: flex
+            justify-content: start
+            align-items: center
+            padding-left: $work_padding*0.8
+        
+
+
+
+
+
+
+
+
+    
+    
+    
+    

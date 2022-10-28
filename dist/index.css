@@ -1,0 +1,279 @@
+* {
+  font-family: "Berkeley Mono";
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+* h1, * h2, * h3, * h4, * h5, * h6, * .h1, * .h2, * .h3, * .h4, * .h5, * .h6 {
+  font-weight: bold;
+}
+* h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+* h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+* p {
+  font-size: 1rem;
+}
+
+hr {
+  color: #fcfcfc;
+  height: 3px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  background-color: #000000;
+}
+
+header.jumbotron .container-fluid {
+  width: 100vw;
+  height: 100vh;
+  color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+iframe {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  z-index: 0;
+}
+
+.landing_intro {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: inline-block;
+  margin-top: 30vh;
+}
+.landing_intro h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.landing_intro h1 {
+  font-size: 2.5rem;
+  text-shadow: 10px 10px 30px #fcfcfc;
+}
+
+.scroll {
+  margin-top: 20px;
+}
+
+.nav-bg {
+  background-color: rgba(252, 252, 252, 0.2);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.onOff {
+  opacity: 0;
+  transition: 0.3s;
+  width: 0;
+}
+
+.navbar-brand {
+  padding-left: 5vw;
+}
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+}
+
+.list img {
+  width: 40px;
+  height: auto;
+}
+
+.navbar-nav {
+  margin-right: 5vw;
+}
+
+.nav-item a {
+  color: #000000;
+  font-size: 20px;
+}
+
+.nav-item a:hover {
+  color: #fcfcfc;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: #4A9E46;
+  /* Green */
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#content_progress {
+  position: fixed;
+  width: 100%;
+  height: 0.1rem;
+  top: 4.6rem;
+  border: 0;
+  background-color: transparent;
+  appearance: none;
+  color: #fcfcfc;
+  opacity: 0.5;
+}
+
+#content_progress::-webkit-progress-bar {
+  background-color: rgba(252, 252, 252, 0.7);
+}
+
+#content_progress::-webkit-progress-value {
+  background-color: #4A9E46;
+}
+
+.row, .col-md-12, .col-md-6 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.pic {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.text {
+  padding-top: 20px;
+  color: #fcfcfc;
+}
+
+.checkBtn {
+  background-color: #fcfcfc;
+  border: solid 1px #4A9E46;
+  padding: 10px 20px;
+  border-radius: 0;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.checkBtn:hover {
+  background-color: #4A9E46;
+  color: #fcfcfc;
+  transition: 0.3s;
+}
+
+#intro {
+  background-color: #fcfcfc;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+#intro h2 {
+  padding: 20px 0 20px 40px;
+}
+#intro .col-lg-4 {
+  padding: 40px;
+}
+#intro .col-lg-4 .intro_img {
+  width: 60px;
+  height: auto;
+}
+#intro .col-lg-4 .intro_text {
+  padding-top: 40px;
+}
+
+section {
+  width: 100%;
+}
+section .cover_img {
+  margin: 0;
+  padding: 5%;
+}
+section .cover_img .cover {
+  width: 100%;
+  border-radius: 0;
+}
+section .cover_text {
+  margin: 0;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+}
+section .cover_text h2 {
+  padding: 20px 0;
+}
+
+.mouseCircle {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  z-index: 1000;
+  mix-blend-mode: lighten;
+  border: solid 1px #fcfcfc;
+}
+
+footer {
+  color: #fcfcfc;
+  display: flex;
+  padding: 2rem 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+footer a:hover {
+  color: #C8E5D5;
+}
+footer .container-fluid {
+  display: flex;
+}
+footer .container-fluid .footer_text, footer .container-fluid .social_media {
+  flex: 4;
+}
+footer .container-fluid .cutLine {
+  width: 0.1px;
+  height: 5rem;
+  border: solid 0.1px #fcfcfc;
+}
+footer .container-fluid .footer_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 4%;
+}
+footer .container-fluid .footer_text .email_greet, footer .container-fluid .footer_text .claim {
+  color: rgba(252, 252, 252, 0.5);
+}
+footer .container-fluid .footer_text .email_greet span, footer .container-fluid .footer_text .claim span {
+  color: #FFE87D;
+}
+footer .container-fluid .social_media {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 4%;
+}
