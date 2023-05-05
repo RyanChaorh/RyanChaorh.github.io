@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/mj.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
+    </script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js">
+    </script>
+    <link rel="icon" href="../image/logo.ico" type="image/x-icon">
+    <title>AIGC works</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="mouseCircle"></div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html"><img src="../image/logo.svg"></a>
+        <button class="navbar-toggler list" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar_menu" aria-expanded="false" aria-label="Toggle navigation"><span></span><img class="list" src="../image/list.svg"></button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-menu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item"><a class="nav-link" href="Resume.pdf">RESUME</a></li>
+                <li class="nav-item"><a class="nav-link" href="ux.html">UX/UI</a></li>
+                <li class="nav-item"><a class="nav-link" href="mj.html">AIGC</a></li>
+                <li class="nav-item"><a class="nav-link" href="photo.html">Photo</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="">CodeArt</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- <progress class="fixed-top onOff" id="content_progress" value="0"></progress>
+    <script src="progress_bar.js">
+    </script> -->
+    <div class="fixed-pics">
+        <div class="container-fluid content">
+            <div class="row mainRow">
+                <div class="col-lg-5">
+                    <div class="fixed-words">
+                        <h3>Mid-Journey AIGC</h3>
+                        <p>Generate AIGC by using Mid-Journey, while learning stable-diffusion at the same time</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_07.png">
+                                    <img src="./image/mj/thumbnail/lightning_07_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_08.png">
+                                    <img src="./image/mj/thumbnail/lightning_08_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_09.png">
+                                    <img src="./image/mj/thumbnail/lightning_09_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_10.png">
+                                    <img src="./image/mj/thumbnail/lightning_10_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_11.png">
+                                    <img src="./image/mj/thumbnail/lightning_11_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_12.png">
+                                    <img src="./image/mj/thumbnail/lightning_12_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_13.png">
+                                    <img src="./image/mj/thumbnail/lightning_13_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_14.png">
+                                    <img src="./image/mj/thumbnail/lightning_14_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_15.png">
+                                    <img src="./image/mj/thumbnail/lightning_15_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_16.png">
+                                    <img src="./image/mj/thumbnail/lightning_16_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_17.png">
+                                    <img src="./image/mj/thumbnail/lightning_17_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cBtn">
+                                <a href="./image/mj/original/lightning_18.png">
+                                    <img src="./image/mj/thumbnail/lightning_18_tn.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="jumbotron">
+        <div class="container-fluid">
+            <div class="footer_text">
+                <h6 class="email_greet">Like my works? Email me <span>↓</span></h6>
+                <div class="cBtn">
+                <h6> 
+                    <a class="email" href="mailto:ryanchaorh@gmail.com?Subject=Hello%20Ryan" target="_top">ryanchaorh@gmail.com</a>
+                </h6>
+                </div>
+                <h6 class="claim">Website's designed and coded by myself</h6>
+            </div>
+            <div class="cutLine"></div>
+            <div class="social_media cBtn">
+                <a class="ins" href="https://www.instagram.com/ryanchaorh/"> <img src="../image/instagram.svg"></a>
+                <a class="facebook" href="https://www.facebook.com/ryan.chao.1481/"><img src="../image/facebook.svg"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/works.js">
+</script>
+
+</html>
