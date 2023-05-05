@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
+    </script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js">
+    </script>
+    <link rel="icon" href="./image/logo_black.svg" type="image/x-icon">
+    <title>PHOTO works</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="mouseCircle"></div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html"><img src="./image/logo.svg"></a>
+        <button class="navbar-toggler list" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar_menu" aria-expanded="false" aria-label="Toggle navigation"><span></span><img class="list" src="../image/list.svg"></button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-menu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item"><a class="nav-link" href="Resume.pdf">RESUME</a></li>
+                <li class="nav-item"><a class="nav-link" href="ux.html">UX/UI</a></li>
+                <li class="nav-item"><a class="nav-link" href="mj.html">AIGC</a></li>
+                <li class="nav-item"><a class="nav-link" href="photo.html">Photo</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="">CodeArt</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- <progress class="fixed-top onOff" id="content_progress" value="0"></progress>
+    <script src="progress_bar.js">
+    </script> -->
+    
+     <div class="container-fluid content">
+        <div class="row mainRow">
+            <div class="col-lg-12">
+                <div class="fixed-words">
+                    <h3>Cityscapes & landscapes & Street photography</h3>
+                    <p>I am a photography and travel enthusiast. My main subjects are urban landscapes, natural scenery, and street photography.</p>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="grid-container">
+              <div class="grid-item"><img src="image/photo/1.png"></div>
+              <div class="grid-item"><img src="image/photo/2.png"></div>
+              <div class="grid-item"><img src="image/photo/3.png"></div>
+              <div class="grid-item"><img src="image/photo/4.png"></div>
+              <div class="grid-item"><img src="image/photo/5.png"></div>
+              <div class="grid-item"><img src="image/photo/6.png"></div>
+              <div class="grid-item"><img src="image/photo/7.png"></div>
+              <div class="grid-item"><img src="image/photo/8.png"></div>
+              <div class="grid-item"><img src="image/photo/9.png"></div>
+              <div class="grid-item"><img src="image/photo/10.png"></div>
+              <div class="grid-item"><img src="image/photo/11.png"></div>
+              <div class="grid-item"><img src="image/photo/12.png"></div>
+              <div class="grid-item"><img src="image/photo/13.png"></div>
+              <div class="grid-item"><img src="image/photo/14.png"></div>
+              <div class="grid-item"><img src="image/photo/15.png"></div>
+              <div class="grid-item"><img src="image/photo/16.png"></div>
+              <div class="grid-item"><img src="image/photo/17.png"></div>
+              <div class="grid-item"><img src="image/photo/18.png"></div>
+              <div class="grid-item"><img src="image/photo/19.png"></div>
+              <div class="grid-item"><img src="image/photo/20.png"></div>
+              <div class="grid-item"><img src="image/photo/21.png"></div>
+              <div class="grid-item"><img src="image/photo/22.png"></div>
+              <div class="grid-item"><img src="image/photo/23.png"></div>
+              <div class="grid-item"><img src="image/photo/24.png"></div>
+              <div class="grid-item"><img src="image/photo/25.png"></div>
+              <div class="grid-item"><img src="image/photo/26.png"></div>
+              <div class="grid-item"><img src="image/photo/27.png"></div>
+              <div class="grid-item"><img src="image/photo/28.png"></div>
+              <div class="grid-item"><img src="image/photo/29.png"></div>
+              <div class="grid-item"><img src="image/photo/30.png"></div>
+              <div class="grid-item"><img src="image/photo/31.png"></div>
+              <div class="grid-item"><img src="image/photo/32.png"></div>
+              <div class="grid-item"><img src="image/photo/33.png"></div>
+              <div class="grid-item"><img src="image/photo/34.png"></div>
+              <div class="grid-item"><img src="image/photo/35.png"></div>
+              <div class="grid-item"><img src="image/photo/36.png"></div>
+              <div class="grid-item"><img src="image/photo/37.png"></div>
+              <div class="grid-item"><img src="image/photo/38.png"></div>
+              <div class="grid-item"><img src="image/photo/39.png"></div>
+              <div class="grid-item"><img src="image/photo/40.png"></div>
+              <div class="grid-item"><img src="image/photo/41.png"></div>
+              <div class="grid-item"><img src="image/photo/42.png"></div>
+              <div class="grid-item"><img src="image/photo/43.png"></div>
+              <div class="grid-item"><img src="image/photo/44.png"></div>
+              <div class="grid-item"><img src="image/photo/45.png"></div>
+              <div class="grid-item"><img src="image/photo/46.png"></div>
+              <div class="grid-item"><img src="image/photo/47.png"></div>
+              <div class="grid-item"><img src="image/photo/48.png"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+    <footer class="jumbotron">
+        <div class="container-fluid">
+            <div class="footer_text">
+                <h6 class="email_greet">Like my works? Email me <span>↓</span></h6>
+                <div class="cBtn">
+                <h6> 
+                    <a class="email" href="mailto:ryanchaorh@gmail.com?Subject=Hello%20Ryan" target="_top">ryanchaorh@gmail.com</a>
+                </h6>
+                </div>
+                <h6 class="claim">Website's designed and coded by myself</h6>
+            </div>
+            <div class="cutLine"></div>
+            <div class="social_media cBtn">
+                <a class="ins" href="https://www.instagram.com/ryanchaorh/"> <img src="./image/instagram.svg"></a>
+                <a class="facebook" href="https://www.facebook.com/ryan.chao.1481/"><img src="./image/facebook.svg"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/works.js">
+</script>
+
+</html>

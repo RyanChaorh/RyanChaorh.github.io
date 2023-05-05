@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEPICKER</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/onepicker.css">
+    <link rel="stylesheet" href="css/ux_navbar.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="./image/logo_black.svg" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- <div class="bg"></div> -->
+    <div class="mouseCircle"></div>
+    <nav class="navbar navbar-expand-lg fixed-top nav-bg onOff">
+        <a class="navbar-brand" href="index.html"><img src="./image/logo_black.svg"></a>
+        <button class="navbar-toggler list" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar_menu" aria-expanded="false" aria-label="Toggle navigation"><span></span><img class="list" src="../image/list.svg"></button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-menu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item"><a class="nav-link about" href="Resume.pdf">RESUME</a></li>
+                <li class="nav-item"><a class="nav-link ux" href="ux.html">UX/UI</a></li>
+                <li class="nav-item"><a class="nav-link aigc" href="mj.html">AIGC</a></li>
+                <li class="nav-item"><a class="nav-link photo" href="photo.html">Photo</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="">CodeArt</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <progress class="fixed-top onOff" id="content_progress" value="0"></progress>
+    <div class="container" id="intro">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="./image/Work_Page/onepicker_cover.png">
+            </div>
+            <div class="col-lg-6">
+                <h5 class="title">Mobile App, UI/UX Design & Human-center Design</h5>
+                <h5 class="subtitle">OnePicker</h5>
+                <p class="title_intro">Taking the Human-center Design course, I follow the process of the needfinding, creating problem statement and create the solution, and finally I made the app help people to make decisions in double choices. </p>
+
+                <div class="details">
+                    <ul>
+                        <li class="list_label">Role</li>
+                        <li class="list_info" >UI/UX Designer</li>
+                        <li class="list_label">Sort</li>
+                        <li class="list_info" >Individual Project</li>
+                        <li class="list_label">Date</li>
+                        <li class="list_info" >9/2021</li>
+                        <li class="list_label">Duration</li>
+                        <li class="list_info" >2 Months</li>
+                    </ul>
+                </div>
+
+                <div class="details_problem">
+                    <ul>
+                        <li class="list_label">Problem</li>
+                        <li class="list_info">Abstract Influcing Elements</li>
+                    </ul>
+                    <p class="title_intro">People are hard to pick one if they have two choices. Why? They do know the influencing elements. The problem is that these factors are abstract, discrete, and cannot be measured in some way. It is not like a mathematical algorithm,
+                        which can be compared by calculation.</p>
+                </div>
+
+                <div class="details_solution">
+                    <ul>
+                        <li class="list_label">Solution</li>
+                        <li class="list_info">Quantify influencing elements</li>
+                    </ul>
+                    <p class="title_intro">Users rate all the factors that influence the choice, rated as matter, maybe matter, and not matter. Assigned according to each level, 20, 10, and 0 points. According to users’ customized labeling system, matching similar user choices
+                        and factors, the application provides related reference for the user to make choice.</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 category">
+                <h5>Needfinding & Interviews</h5>
+                <img src="./image/onepicker/needfinding1.png">
+            </div>
+            <div class="col-lg-6 category2">
+                <h5>Needfinding & Interviews</h5>
+                <img src="./image/onepicker/needfinding2.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 analysis">
+                <h5 >Analysis</h5>
+                <p>I have a friend who got married soon. He discussed future plans with his wife, such as life stages, having children, etc. There were always disagreements, and each discussion went nowhere. Among my friends who happen to be my age, there
+                    are also several who are just married, so I do the next interviews.</p>
+                
+            </div>
+            <div class="col-lg-6 analysis">
+                <h5 style="opacity: 0;">Analysis</h5>
+                <p >I also analyzed the interviews of several interviewees who were greatly affected by the issue of marriage urges. I found that these women wanted to show their independence to their parents, so that parents could understand that pushing
+                    for marriage would do nothing but make them annoyed, or that they also had enough independence to keep a good life themselves.</p>
+                
+            </div>
+        </div>
+        <div class="row part">
+            <div class="col-lg-6 analysis">
+                <h5 >Then</h5>
+                <p >After my interviews with multiple friends on the topic of marriage. I found that for Chinese people, getting married is a big turning point in life. For post-marriage, pre-marriage problems are more common. The matter of urging marriage
+                is a very common problem in the age group of 25 to 30 years old. Among the interviewees, women are the most affected by this issue..</p>
+            </div>
+            <div class="col-lg-6 analysis">
+                <h5 >Need Statement</h5>
+                <p >International Chinese graduated female students around 25 years old needs to fill their respect needs because they want to be treated as an independent adult can make their own decisions.</p>
+            </div>
+        </div>
+            
+                
+    </div>
+    <!-- persona -->
+    <div class="container-fluid bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 category">
+                    <h5>Persona</h5>
+                    <img src="./image/onepicker/persona_zimu.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brainstorm -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 category">
+                <h5>Brainstorm</h5>
+                <p>What are indenpent abilities?</p>
+                <img src="./image/onepicker/brainstorm1.png" style="width: 100%; margin-top:4vh;">
+            </div>
+            <div class="col-lg-6 category">
+                <h5 style="opacity: 0;">Brainstorm</h5>
+                <p>How to show?</p>
+                <img src="./image/onepicker/brainstorm2.png" style="width: 100%;margin-top:2vh;">
+            </div>
+        </div>
+    </div>
+    <!-- words development -->
+    <div class="container-fluid bg_2">
+        <div class="container word">
+            <div class="row">
+                <div class="col-lg-4 words">
+                    <h5>Be treated by their parents as independent adults</h5>
+                </div>
+                <div class="col-lg-4 words">
+                    <h5>Show their parents signal</h5>
+                </div>
+                <div class="col-lg-4 words">
+                    <h5>Signal= What they get after they review their decision --> Efforts and Responsibility.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HMW+final idea -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h5 class="h_name">How Might We</h5>
+                <h5 class="h_content">How might we help International Chinese graduated female students in the U.S.to be treated by their parents as independent adults through showing their parents what they learned after making their own decision?</h5>
+                <h5 class="h_name">Final Idea</h5>
+                <h5 class="h_content">I want to design an app that can help users make their own choices by quantifying the influencing factors when faced with two choices, and referring to the decisions made by users similar to the user in the database. After making decision,
+                    maybe 1 week or 1 months later, user can review the decision that recording what efforts they made and what responsibilities they took.</h5>
+                <h5 class="h_name">Main Functions</h5>
+                <h5 class="h_content">1. Build your own tag system.</h5>
+                <h5 class="h_content">2. Quantify influencing elements give the decisions number value.</h5>
+                <h5 class="h_content">3. Refer to the decision history of similar users.</h5>
+                <h5 class="h_content">4. Record efforts and responsibilities.</h5>
+
+            </div>
+        </div>
+    </div>
+    <!-- tag system introduction -->
+    <div class="container-fluid bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 tags">
+                    <h5 class="h_name">About tag system</h5>
+                    <h5 class="h_content">Tags:</h5>
+                    <img src="./image/onepicker/tag_system.png" style="width: 70%">
+
+                    <h5 class="h_name">About community Reference</h5>
+                    <h5 class="h_content">System will connect the words with relationship. Like MFA and graduated students that different words but have similar meaning. Like if u search buying a car, it will show the summary of similar question of similar users. This is about
+                        database algorithm.</h5>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="h_name">About quantifying influencing Elements</h5>
+                    <h5 class="h_content">
+                        <ul>
+                            <li>All influencing elements are dividing into 3 levels: Matter, might matter and not matter.</li>
+                            <li>Converting levels into score is 20 points, 10 points and 0 points.</li>
+                            <li>Every problem have 5 default elements and users can add more.</li>
+                            <li>For example: Should I buy a car?
+                                <ul>
+                                    <li><span>YES</span> or <span>NO</span></li>
+                                    <li>5 Elements: Distance, Cost, Parking, Car maintenance, Usage frequency.
+                                        <ul>
+                                            <li>Cost is not a problem, so add <span>YES</span> 10 points, and <span>NO</span> 20 points.</li>
+                                            <li>Live away from school, so for distance, add <span>YES</span> 20 points, <span>NO</span> 0 point.</li>
+                                            <li>School and house have parking, add <span>YES</span> 0 point, <span>NO</span> 10 point.</li>
+                                            <li>Car maintenance, wash car once a month, <span>NO</span>t a problem, add <span>YES</span> 10 points, <span>NO</span> 20 points.</li>
+                                            <li>Always go out for fun, add <span>YES</span> 20 points, <span>NO</span> 0 points.</li>
+                                            <li>Final: <span>YES</span> 60 points, <span>NO</span> 50 points</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- flowchart + architecture -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 flow">
+                <h5 class="h_name">Flow Chart</h5>
+                <img src="./image/onepicker/flowchart.png">
+            </div>
+            <div class="col-lg-9 arch">
+                <h5 class="h_name">Information Architecture</h5>
+                <img src="./image/onepicker/architecture.png">
+            </div>
+        </div>
+    </div>
+    <!-- prototype -->
+    <div class="container-fluid bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 proto">
+                    <h5 class="h_name">Prototype</h5>
+                    <img src="./image/onepicker/prototype1.png">
+                    <img src="./image/onepicker/prototype2.png">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- mockup -->
+    <div class="container mockup">
+        <div class="row">
+            <div class="col-lg-12 mock">
+                <h5 class="h_name">Mockup</h5>
+                <img src="./image/onepicker/mockup.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 prototype">
+                <h5>Check <a class="portotype" href="https://www.figma.com/proto/IyLN0GbztfNfGMfni3MoCk/IXDS-720?page-id=110%3A2&node-id=169%3A637&viewport=241%2C48%2C0.09&scaling=min-zoom&starting-point-node-id=169%3A637&show-proto-sidebar=1">Interactive Prototype</a>                    </h5>
+
+                <a href="#top" target="_self" style="float: right; margin-top: 2%">
+                    <img src="./image/totop.svg" style="width: 2em;" alt="Back to Top">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="jumbotron">
+        <div class="container-fluid">
+            <div class="footer_text">
+                <h6 class="email_greet">Like my works? Email me <span>↓</span></h6>
+                <div class="cBtn">
+                <h6> 
+                    <a class="email" href="mailto:ryanchaorh@gmail.com?Subject=Hello%20Ryan" target="_top">ryanchaorh@gmail.com</a>
+                </h6>
+                </div>
+                <h6 class="claim">Website's designed and coded by myself</h6>
+            </div>
+            <div class="cutLine"></div>
+            <div class="social_media cBtn">
+                <a class="ins" href="https://www.instagram.com/ryanchaorh/"> <img src="./image/instagram.svg"></a>
+                <a class="facebook" href="https://www.facebook.com/ryan.chao.1481/"><img src="./image/facebook.svg"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="js/works.js">
+</script>
+
+</html>
