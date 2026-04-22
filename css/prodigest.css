@@ -47,23 +47,26 @@ img {
 }
 
 .details ul{
-    grid-template-columns: calc(33.333% - 16px) 66.667%;
-    grid-column-gap: 16px;
+    display: grid;
+    grid-template-columns: minmax(110px, 32%) 1fr;
+    column-gap: 16px;
+    row-gap: 0.25rem;
     align-items: baseline;
-    
+    margin: 0;
+    padding: 0;
 }
 
 
 .list_label {
     line-height: 1.5em;
     font-weight: 700;
-    float: left;
     font-weight: 600;
     opacity: 67%;
+    margin: 0;
 }
 
 .list_info{
-    margin-left: 20%; 
+    margin: 0;
     font-weight: 500; 
     opacity: 78%
 }
@@ -189,4 +192,3 @@ img {
 #content_progress::-webkit-progress-value {
     background-color: #4A9E46;
 }
-

@@ -6,11 +6,24 @@
     <title>p5</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
 
 </head>
 
-<body style="margin: 0%;padding: 0;">
+<body>
     <!-- <script src="index_p5.js"></script> -->
     <script>
         let myCanvas;
@@ -22,7 +35,7 @@ let colors_2 = "0d3b66-faf0ca-f4d35e-ee964b-f95738"
     .map((a) => "#" + a);
 
 function setup() {
-    myCanvas = createCanvas(windowWidth-4, windowHeight-4);
+    myCanvas = createCanvas(windowWidth, windowHeight);
     // Put setup code here
     background(0);
 }
@@ -78,6 +91,10 @@ function mouseMoved() {
     let y = parent.mouseY;
     // 在这里处理鼠标事件
   }
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
     </script>
 </body>
    

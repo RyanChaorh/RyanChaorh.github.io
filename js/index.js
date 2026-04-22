@@ -1,120 +1,162 @@
+(function () {
+  const mouseCircle = document.querySelector('.mouseCircle');
+  const cBtns = document.querySelectorAll('.cBtn');
+  const bg = document.querySelector('.bg');
+  const navbar = document.querySelector('.navbar');
+  const progress = document.querySelector('#content_progress');
+  const fadeItems = document.querySelectorAll('.fade-in');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const supportsHoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-var mouseCircle = document.querySelector('.mouseCircle');
-var cBtns = document.querySelectorAll('.cBtn');
-var mouseX = 0, mouseY = 0;
-var circleX = 0, circleY = 0;
-
-function updateCircle() {
-  var distX = mouseX - circleX;
-  var distY = mouseY - circleY;
-  circleX = circleX + (distX * 0.2);
-  circleY = circleY + (distY * 0.2);
-  mouseCircle.style.left = circleX + 'px';
-  mouseCircle.style.top = circleY + 'px';
-  requestAnimationFrame(updateCircle);
-}
-
-updateCircle();
-
-document.addEventListener('mousemove', function(e) {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
-
-cBtns.forEach(function(cBtn) {
-  cBtn.addEventListener('mouseover', function(e) {
-    mouseCircle.style.width = '4rem';
-    mouseCircle.style.height = '4rem';
-    mouseCircle.classList.add('active');
-    mouseCircle.style.mixBlendMode = 'normal';
-  });
-
-  cBtn.addEventListener('mouseout', function(e) {
-    mouseCircle.style.width = '1rem';
-    mouseCircle.style.height = '1rem';
-    mouseCircle.classList.remove('active');
-    mouseCircle.style.mixBlendMode = 'exclusion';
-  });
-});
-
-/-----/
-const bg = document.querySelector('.bg');
-
-window.addEventListener('mousemove', e => {
-  const x = e.clientX / window.innerWidth;
-  const y = e.clientY / window.innerHeight;
-  bg.style.background = `radial-gradient(circle at ${x*100}% ${y*100}%, #222, #000)`;
-});
-
-/-----/
-
-const textContainer = document.getElementById('text-container');
-const h4 = textContainer.querySelector('h4');
-const h1 = textContainer.querySelector('h1');
-const h1Words = h1.innerText.split(' ');
-
-h1.innerHTML = '';
-
-h1Words.forEach((word, i) => {
-  const span = document.createElement('span');
-  span.innerText = word + ' ';
-
-  if (i === h1Words.length - 1) {
-    span.addEventListener('animationend', () => {
-      h1.style.animation = 'none';
-    });
+  if (bg && !bg.style.background) {
+    bg.style.background = 'radial-gradient(circle at 50% 20%, #1f1f1f, #000)';
   }
 
-  h1.appendChild(span);
-});
+  if (supportsHoverPointer && !prefersReducedMotion && mouseCircle) {
+    const cursorStorageKey = 'rc_cursor_position';
+    const fallbackX = window.innerWidth / 2;
+    const fallbackY = window.innerHeight / 2;
+    let mouseX = fallbackX;
+    let mouseY = fallbackY;
+    let circleX = fallbackX;
+    let circleY = fallbackY;
+    let pendingMouseFrame = false;
 
-h1.innerHTML += '<br>';
-
-h4.style.opacity = 0;
-
-setTimeout(() => {
-  h4.style.animation = 'fadeIn 2s forwards';
-}, 1000);
-
-function fadeIn() {
-  h4.removeEventListener('animationend', fadeIn);
-  h4.style.opacity = 1;
-  h4.style.animation = 'none';
-}
-
-h4.addEventListener('animationend', fadeIn);
-
-
-/-----/
-
-
-$(window).scroll(function(evt) {
-  if ($(window).scrollTop() > 850) {
-      $(".navbar,progress").removeClass("onOff");
-      $(".navbar").addClass("bg-light");
-      $(".navbar").addClass("navbar-light ");
-      $("#content_progress").css("opacity", 0.5); // 设置不透明度为0.8
-  } else {
-      $(".navbar,progress").addClass("onOff");
-      $(".navbar").removeClass("bg-light");
-      $(".navbar").removeClass("navbar-light ");
-      $("#content_progress").css("opacity", 0); // 恢复不透明度为1
-  }
-});
-
-const elements = document.querySelectorAll('.fade-in');
-
-function fadeInElements() {
-  elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (elementTop+100 < windowHeight) {
-      element.style.opacity = 1;
-    } else {
-      element.style.opacity = 0;
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(cursorStorageKey) || 'null');
+      if (saved && Number.isFinite(saved.x) && Number.isFinite(saved.y)) {
+        mouseX = saved.x;
+        mouseY = saved.y;
+        circleX = saved.x;
+        circleY = saved.y;
+      }
+    } catch (error) {
+      // Ignore malformed storage data.
     }
-  });
-}
 
-window.addEventListener('scroll', fadeInElements);
+    mouseCircle.style.left = circleX + 'px';
+    mouseCircle.style.top = circleY + 'px';
+
+    const updateCircle = () => {
+      const distX = mouseX - circleX;
+      const distY = mouseY - circleY;
+      circleX += distX * 0.2;
+      circleY += distY * 0.2;
+      mouseCircle.style.left = circleX + 'px';
+      mouseCircle.style.top = circleY + 'px';
+      requestAnimationFrame(updateCircle);
+    };
+
+    updateCircle();
+
+    document.addEventListener('mousemove', (event) => {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      sessionStorage.setItem(cursorStorageKey, JSON.stringify({ x: mouseX, y: mouseY }));
+
+      if (!bg || pendingMouseFrame) {
+        return;
+      }
+
+      pendingMouseFrame = true;
+      requestAnimationFrame(() => {
+        const x = (mouseX / window.innerWidth) * 100;
+        const y = (mouseY / window.innerHeight) * 100;
+        bg.style.background = 'radial-gradient(circle at ' + x + '% ' + y + '%, #222, #000)';
+        pendingMouseFrame = false;
+      });
+    });
+
+    cBtns.forEach((cBtn) => {
+      cBtn.addEventListener('mouseenter', () => {
+        mouseCircle.style.width = '4rem';
+        mouseCircle.style.height = '4rem';
+        mouseCircle.classList.add('active');
+        mouseCircle.style.mixBlendMode = 'normal';
+      });
+
+      cBtn.addEventListener('mouseleave', () => {
+        mouseCircle.style.width = '1rem';
+        mouseCircle.style.height = '1rem';
+        mouseCircle.classList.remove('active');
+        mouseCircle.style.mixBlendMode = 'exclusion';
+      });
+    });
+  } else if (mouseCircle) {
+    mouseCircle.style.display = 'none';
+  }
+
+  const textContainer = document.getElementById('text-container');
+  if (textContainer) {
+    const h4 = textContainer.querySelector('h4');
+    const h1 = textContainer.querySelector('h1');
+
+    if (h1) {
+      const h1Words = h1.innerText.split(' ');
+      h1.innerHTML = '';
+
+      h1Words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.innerText = word + ' ';
+
+        if (index === h1Words.length - 1) {
+          span.addEventListener('animationend', () => {
+            h1.style.animation = 'none';
+          });
+        }
+
+        h1.appendChild(span);
+      });
+
+      h1.insertAdjacentHTML('beforeend', '<br>');
+    }
+
+    if (h4) {
+      h4.style.opacity = '0';
+      setTimeout(() => {
+        h4.style.animation = 'fadeIn 2s forwards';
+      }, 1000);
+
+      h4.addEventListener('animationend', function handleFadeIn() {
+        h4.style.opacity = '1';
+        h4.style.animation = 'none';
+        h4.removeEventListener('animationend', handleFadeIn);
+      });
+    }
+  }
+
+  const updateNavVisibility = () => {
+    const isMobile = window.innerWidth <= 991;
+    const isVisible = isMobile || window.scrollY > 850;
+
+    if (navbar) {
+      navbar.classList.toggle('onOff', !isVisible);
+      navbar.classList.toggle('bg-light', isVisible);
+      navbar.classList.toggle('navbar-light', isVisible);
+    }
+
+    if (progress) {
+      progress.classList.toggle('onOff', !isVisible || isMobile);
+      progress.style.opacity = isVisible && !isMobile ? '0.5' : '0';
+    }
+  };
+
+  updateNavVisibility();
+  window.addEventListener('scroll', updateNavVisibility, { passive: true });
+
+  if (fadeItems.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -8% 0px'
+      }
+    );
+
+    fadeItems.forEach((item) => observer.observe(item));
+  }
+})();

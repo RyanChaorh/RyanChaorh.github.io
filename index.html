@@ -7,17 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
-    </script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">
-    </script>
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js">
-    </script>
+    <script defer src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script defer src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script defer src="js/progress_bar.js"></script>
+    <script defer src="js/index.js"></script>
     <link rel="icon" href="image/logo_black.svg" type="image/x-icon">
     <title>RYAN'S WEBSITE</title>
 </head>
@@ -26,8 +19,8 @@
     <div class="bg"></div>
     <div class="mouseCircle"></div>
     <nav class="navbar navbar-expand-lg fixed-top nav-bg onOff">
-        <a class="navbar-brand" href="index.html"><img src="image/logo_black.svg"></a>
-        <button class="navbar-toggler list" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar_menu" aria-expanded="false" aria-label="Toggle navigation"><span></span><img class="list" src="../image/list.svg"></button>
+        <a class="navbar-brand" href="index.html"><img src="image/logo_black.svg" alt="Ryan Chao logo"></a>
+        <button class="navbar-toggler list" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation"><span></span><img class="list" src="image/list.svg" alt="menu"></button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-menu">
             <ul class="navbar-nav text-center">
                 <li class="nav-item"><a class="nav-link about" href="Resume.pdf">RESUME</a></li>
@@ -39,10 +32,8 @@
         </div>
     </nav>
     <progress class="fixed-top onOff" id="content_progress" value="0"></progress>
-    <script src="progress_bar.js">
-    </script>
     <header class="jumbotron">
-        <iframe src="index_bg.html" frameborder="0"> </iframe>
+        <iframe src="index_bg.html" frameborder="0" title="animated background"></iframe>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -59,19 +50,19 @@
         <div class="container-fluid fade-in">
             <div class="row">
                 <h2>What can I do?</h2>
-                <div class="col-lg-4"> <img class="intro_img" src="image/data.svg">
+                <div class="col-lg-4"> <img class="intro_img" src="image/data.svg" alt="Research and analysis icon" loading="lazy" decoding="async">
                     <div class="intro_text">
                         <h4>Research & Analysis</h4>
                         <p>Analyze the data and information collected through the interviews and secondary researches</p>
                     </div>
                 </div>
-                <div class="col-lg-4"> <img class="intro_img" src="image/trip.svg">
+                <div class="col-lg-4"> <img class="intro_img" src="image/trip.svg" alt="Prototype icon" loading="lazy" decoding="async">
                     <div class="intro_text">
                         <h4>Prototype</h4>
                         <p>Create the hifi prototype with the flowchart analyzed</p>
                     </div>
                 </div>
-                <div class="col-lg-4"> <img class="intro_img" src="image/code.svg">
+                <div class="col-lg-4"> <img class="intro_img" src="image/code.svg" alt="Motion and code icon" loading="lazy" decoding="async">
                     <div class="intro_text">
                         <h4>Motion & Code</h4>
                         <p>Apply the motion and coding knowledge to the design </p>
@@ -80,7 +71,7 @@
             </div>
         </div>
     </section>
-    <banner>
+    <section id="featured-project">
         <div class="container-fluid banner">
             <div class="row fade-in">
                 <div class="col-lg-12 subtitle">
@@ -89,7 +80,7 @@
             </div>
             <div class="row fade-in">
                 <div class="col-lg-12">
-                    <img class="pic" src="image/prodigest_banner.png">
+                    <img class="pic" src="image/prodigest_banner.png" alt="Prodigest case study cover" loading="lazy" decoding="async">
                     <div class="text">
                         <h5>Mobile App, UI/UX Design</h5>
                         <h2>PRODIGEST</h2>
@@ -99,12 +90,12 @@
                 </div>
             </div>
         </div>
-    </banner>
+    </section>
     <section id="section_ux">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 workA fade-in"> 
-                    <img class="pic" src="image/Work_Page/scad_cover.png">
+                    <img class="pic" src="image/Work_Page/scad_cover.png" alt="SCAD redesign project cover" loading="lazy" decoding="async">
                     <div class="text">
                         <h5>Website, UI/UX Design & Service Design</h5>
                         <h2>SCAD Course Selection Redesign</h2>
@@ -113,7 +104,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 workB fade-in"> 
-                    <img class="pic" src="image/Work_Page/hikit_cover.png">
+                    <img class="pic" src="image/Work_Page/hikit_cover.png" alt="HIKIT project cover" loading="lazy" decoding="async">
                     <div class="text">
                         <h5>Mobile App, UI/UX Design</h5>
                         <h2>HIKIT</h2>
@@ -147,7 +138,7 @@
                 <div class="col-lg-6 mjPic_img">
                     <div class="cBtn">
                         <a href="image/mj/original/lightning_08.png">
-                            <img src="image/mj/thumbnail/lightning_08_tn.png">
+                            <img src="image/mj/thumbnail/lightning_08_tn.png" alt="AI art thumbnail 1" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -156,7 +147,7 @@
                 <div class="col-lg-6 mjPic_img">
                     <div class="cBtn">
                         <a href="image/mj/original/lightning_09.png">
-                         <img src="image/mj/thumbnail/lightning_09_tn.png">
+                         <img src="image/mj/thumbnail/lightning_09_tn.png" alt="AI art thumbnail 2" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -180,7 +171,7 @@
             <div class="row fade-in">
                 <div class="col-lg-4 photo">
                     <div class="cBtn">
-                        <img class="pic" src="image/photo/1.png">
+                        <img class="pic" src="image/photo/1.png" alt="Chicago Night Skyline photo" loading="lazy" decoding="async">
                         <a href="image/photo/1.png">
                             <div class="text">
                                 <h5>Chicago Night Skyline</h5>
@@ -190,8 +181,8 @@
                 </div>
                 <div class="col-lg-4 photo">
                     <div class="cBtn">
-                        <img class="pic" src="image/photo/2.png">
-                        <a href="image/photo/1.png">
+                        <img class="pic" src="image/photo/2.png" alt="Western US Road Scenery photo" loading="lazy" decoding="async">
+                        <a href="image/photo/2.png">
                             <div class="text">
                                 <h5>Western US Road Scenery</h5>
                             </div>
@@ -200,8 +191,8 @@
                 </div>
                 <div class="col-lg-4 photo">
                     <div class="cBtn">
-                        <img class="pic" src="image/photo/3.png">
-                        <a href="image/photo/1.png">
+                        <img class="pic" src="image/photo/3.png" alt="Antelope Canyon photo" loading="lazy" decoding="async">
+                        <a href="image/photo/3.png">
                             <div class="text">
                                 <h5>Antelope Canyon</h5>
                             </div>
@@ -212,18 +203,18 @@
             <div class="row fade-in">
                 <div class="col-lg-4 photo">
                     <div class="cBtn">
-                        <img class="pic" src="image/photo/18.png">
-                        <a href="image/photo/1.png">
+                        <img class="pic" src="image/photo/18.png" alt="Chicago Cloud Gate photo" loading="lazy" decoding="async">
+                        <a href="image/photo/18.png">
                             <div class="text">
-                                <h5>Chicago Clooud Gate</h5>
+                                <h5>Chicago Cloud Gate</h5>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 photo">
                     <div class="cBtn">
-                        <img class="pic" src="image/photo/12.png">
-                        <a href="image/photo/1.png">
+                        <img class="pic" src="image/photo/12.png" alt="Arches National Park photo" loading="lazy" decoding="async">
+                        <a href="image/photo/12.png">
                             <div class="text">
                                 <h5>Arches National Park</h5>
                             </div>
@@ -232,8 +223,8 @@
                 </div>
                 <div class="col-lg-4 photo">
                     <div class="cBtn">
-                        <img class="pic" src="image/photo/6.png">
-                        <a href="image/photo/1.png">
+                        <img class="pic" src="image/photo/6.png" alt="Chicago Day Skyline photo" loading="lazy" decoding="async">
+                        <a href="image/photo/6.png">
                             <div class="text">
                                 <h5>Chicago Day Skyline</h5>
                             </div>
@@ -260,14 +251,10 @@
             </div>
             <div class="cutLine"></div>
             <div class="social_media cBtn">
-                <a class="ins" href="https://www.instagram.com/ryanchaorh/"> <img src="image/instagram.svg"></a>
-                <a class="facebook" href="https://www.facebook.com/ryan.chao.1481/"><img src="image/facebook.svg"></a>
+                <a class="ins" href="https://www.instagram.com/ryanchaorh/" aria-label="Instagram profile"> <img src="image/instagram.svg" alt="Instagram"></a>
+                <a class="facebook" href="https://www.facebook.com/ryan.chao.1481/" aria-label="Facebook profile"><img src="image/facebook.svg" alt="Facebook"></a>
             </div>
         </div>
     </footer>
 </body>
-<script src="js/index.js">
-</script>
-
-
 </html>
