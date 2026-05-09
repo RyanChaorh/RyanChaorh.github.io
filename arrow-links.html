@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARROW Electronic | Links</title>
+    <meta
+      name="description"
+      content="Mobile-first quick links for ARROW Electronic."
+    />
+    <style>
+      :root {
+        --bg-top: #f4f8ff;
+        --bg-bottom: #eef3fb;
+        --panel: rgba(255, 255, 255, 0.88);
+        --card: rgba(255, 255, 255, 0.96);
+        --ink: #132238;
+        --muted: #5e6f87;
+        --line: rgba(31, 79, 156, 0.12);
+        --brand: #2f69b9;
+        --brand-deep: #1f4f9c;
+        --brand-soft: #dce8fb;
+        --green: #00a651;
+        --red: #f20513;
+        --orange: #f48b00;
+        --shadow: 0 22px 54px rgba(28, 65, 128, 0.14);
+        --radius-xl: 30px;
+        --radius-lg: 22px;
+        --radius-md: 16px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 14px;
+        font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47, 105, 185, 0.18), transparent 34%),
+          radial-gradient(circle at 88% 12%, rgba(0, 166, 81, 0.08), transparent 18%),
+          radial-gradient(circle at 92% 18%, rgba(242, 5, 19, 0.08), transparent 12%),
+          radial-gradient(circle at 96% 24%, rgba(244, 139, 0, 0.08), transparent 10%),
+          linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+      }
+
+      .page {
+        position: relative;
+        overflow: hidden;
+        width: min(100%, 430px);
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: var(--radius-xl);
+        background: var(--panel);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(135deg, rgba(47, 105, 185, 0.06), transparent 38%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.4), transparent 18%);
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .scene svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .scene .shell {
+        fill: rgba(47, 105, 185, 0.035);
+        stroke: rgba(47, 105, 185, 0.1);
+        stroke-width: 1.1;
+      }
+
+      .scene .driver-core {
+        fill: rgba(47, 105, 185, 0.07);
+      }
+
+      .scene .driver-ring {
+        fill: none;
+        stroke: rgba(47, 105, 185, 0.085);
+        stroke-width: 1;
+      }
+
+      .scene .bar {
+        fill: rgba(47, 105, 185, 0.055);
+        stroke: rgba(47, 105, 185, 0.08);
+        stroke-width: 0.9;
+      }
+
+      .scene .wave {
+        fill: none;
+        stroke: rgba(47, 105, 185, 0.07);
+        stroke-width: 1.1;
+      }
+
+      .scene .glow {
+        fill: rgba(47, 105, 185, 0.03);
+      }
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        padding: 6px 6px 2px;
+        text-align: center;
+      }
+
+      .logo-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .logo-wrap::before {
+        content: "";
+        position: absolute;
+        width: 84%;
+        height: 78%;
+        bottom: 2%;
+        border-radius: 999px;
+        background:
+          radial-gradient(circle, rgba(47, 105, 185, 0.18), rgba(47, 105, 185, 0.02) 68%, transparent 74%);
+        filter: blur(12px);
+      }
+
+      .logo-wrap img {
+        display: block;
+        width: min(270px, 84%);
+        height: auto;
+        position: relative;
+        z-index: 1;
+        filter: drop-shadow(0 10px 22px rgba(47, 105, 185, 0.12));
+      }
+
+      .lead {
+        margin: 6px auto 0;
+        max-width: 100%;
+        padding: 6px 10px 0;
+      }
+
+      .lead-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--ink);
+      }
+
+      .lead-meta {
+        margin: 10px 0 0;
+        font-size: 0.84rem;
+        line-height: 1.65;
+        color: var(--muted);
+      }
+
+      .links {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .link-card,
+      .copy-button {
+        transition:
+          transform 180ms ease-out,
+          box-shadow 220ms ease-out,
+          border-color 220ms ease-out,
+          background-color 220ms ease-out;
+      }
+
+      .link-card {
+        display: grid;
+        grid-template-columns: 48px 1fr auto;
+        align-items: center;
+        gap: 14px;
+        min-height: 72px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--card);
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 12px 28px rgba(31, 79, 156, 0.07);
+      }
+
+      .link-card:hover,
+      .copy-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .link-card:active,
+      .copy-button:active {
+        transform: scale(0.98);
+      }
+
+      .link-card.primary {
+        border-color: transparent;
+        background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+        color: #f9fbff;
+        box-shadow: 0 16px 34px rgba(47, 105, 185, 0.28);
+      }
+
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 15px;
+        background: var(--brand-soft);
+        color: var(--brand-deep);
+        overflow: hidden;
+      }
+
+      .link-card.primary .icon {
+        background: rgba(255, 255, 255, 0.16);
+        color: #ffffff;
+      }
+
+      .icon svg,
+      .icon img {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+
+      .icon img {
+        width: 34px;
+        height: auto;
+      }
+
+      .link-copy strong {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .link-copy span {
+        display: block;
+        margin-top: 3px;
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+
+      .link-card.primary .link-copy span {
+        color: rgba(249, 251, 255, 0.82);
+      }
+
+      .arrow {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .contact-box {
+        position: relative;
+        z-index: 1;
+        margin-top: 14px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: rgba(235, 243, 255, 0.72);
+      }
+
+      .contact-box small {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+
+      .contact-grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .contact-item {
+        padding: 12px;
+        border: 1px solid rgba(47, 105, 185, 0.1);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.64);
+      }
+
+      .contact-item small {
+        margin-bottom: 6px;
+        text-align: left;
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+      }
+
+      .contact-item a {
+        display: block;
+        text-align: left;
+        color: var(--brand-deep);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .copy-button {
+        display: block;
+        width: 100%;
+        min-height: 42px;
+        margin-top: 12px;
+        border: 1px solid rgba(47, 105, 185, 0.12);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--brand-deep);
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .copy-button[data-copied="true"] {
+        border-color: rgba(0, 166, 81, 0.22);
+        background: rgba(0, 166, 81, 0.12);
+        color: var(--green);
+      }
+
+      .accent-bars {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 14px;
+      }
+
+      .accent-bars span {
+        width: 24px;
+        height: 4px;
+        border-radius: 999px;
+      }
+
+      .accent-bars span:nth-child(1) {
+        background: var(--green);
+      }
+
+      .accent-bars span:nth-child(2) {
+        background: var(--red);
+      }
+
+      .accent-bars span:nth-child(3) {
+        background: var(--orange);
+      }
+
+      @media (max-width: 420px) {
+        .page {
+          padding: 14px;
+          border-radius: 24px;
+        }
+
+        .logo-wrap img {
+          width: min(240px, 84%);
+        }
+
+        .lead {
+          padding: 4px 6px 0;
+        }
+
+        .lead-title {
+          font-size: 0.96rem;
+        }
+
+        .link-card {
+          grid-template-columns: 44px 1fr auto;
+          min-height: 66px;
+          padding: 12px 14px;
+        }
+
+        .icon {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="scene" aria-hidden="true">
+        <svg viewBox="0 0 430 1320" preserveAspectRatio="none" aria-hidden="true">
+          <ellipse class="glow" cx="118" cy="150" rx="96" ry="54"></ellipse>
+          <ellipse class="glow" cx="338" cy="1088" rx="116" ry="72"></ellipse>
+
+          <rect class="bar" x="262" y="108" rx="18" ry="18" width="168" height="32" transform="rotate(-12 262 108)"></rect>
+          <rect class="bar" x="68" y="790" rx="10" ry="10" width="294" height="18"></rect>
+
+          <circle class="driver-core" cx="36" cy="560" r="24"></circle>
+          <circle class="driver-ring" cx="36" cy="560" r="40"></circle>
+          <circle class="driver-ring" cx="36" cy="560" r="56"></circle>
+
+          <circle class="driver-core" cx="394" cy="980" r="32"></circle>
+          <circle class="driver-ring" cx="394" cy="980" r="52"></circle>
+          <circle class="driver-ring" cx="394" cy="980" r="74"></circle>
+
+          <rect class="shell" x="-34" y="430" rx="34" ry="34" width="104" height="258" transform="rotate(-9 -34 430)"></rect>
+          <circle class="driver-core" cx="20" cy="500" r="14"></circle>
+          <circle class="driver-ring" cx="20" cy="588" r="26"></circle>
+
+          <rect class="shell" x="374" y="742" rx="34" ry="34" width="104" height="276" transform="rotate(8 374 742)"></rect>
+          <circle class="driver-core" cx="410" cy="816" r="14"></circle>
+          <circle class="driver-ring" cx="410" cy="910" r="30"></circle>
+
+          <path class="wave" d="M-6 678 C38 646, 54 646, 96 678"></path>
+          <path class="wave" d="M-18 704 C38 662, 62 662, 118 704"></path>
+
+          <path class="wave" d="M324 598 C372 564, 394 564, 438 598"></path>
+          <path class="wave" d="M308 626 C368 580, 400 580, 456 626"></path>
+
+          <path class="wave" d="M56 1166 C124 1148, 196 1148, 274 1164"></path>
+          <path class="wave" d="M248 1214 C314 1196, 366 1198, 432 1220"></path>
+        </svg>
+      </div>
+
+      <section class="hero">
+        <div class="logo-wrap">
+          <img src="image/arrow/logo-trimmed.png" alt="ARROW Electronic logo" />
+        </div>
+        <div class="lead">
+          <p class="lead-title">20+ years of OEM and ODM speaker manufacturing for global audio brands.</p>
+          <p class="lead-meta">Main categories: 2.0 speakers, 2.1 speakers, soundbars, Bluetooth speakers, and gaming speakers.</p>
+        </div>
+      </section>
+
+      <section class="links" aria-label="Quick links">
+        <a
+          class="link-card primary"
+          href="https://wa.me/19122206761"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.48 0 .11 5.37.11 11.96c0 2.1.55 4.16 1.58 5.97L0 24l6.24-1.63a11.9 11.9 0 0 0 5.82 1.48h.01c6.59 0 11.96-5.37 11.96-11.96 0-3.2-1.25-6.21-3.51-8.41Zm-8.45 18.35h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.7.97.99-3.61-.23-.37a9.9 9.9 0 0 1-1.53-5.28c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.92 7.03c0 5.48-4.46 9.94-9.95 9.94Zm5.45-7.44c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.19.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.45.13-.6.13-.12.3-.32.45-.47.15-.15.2-.25.3-.42.1-.17.05-.32-.03-.47-.07-.15-.67-1.61-.91-2.2-.24-.57-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.46s1.07 2.84 1.22 3.04c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>WhatsApp</strong>
+            <span>Fastest way to contact Ryan</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+
+        <a
+          class="link-card"
+          href="http://www.china-speakers.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="icon" aria-hidden="true">
+            <img src="image/arrow/logo-transparent.png" alt="" />
+          </span>
+          <span class="link-copy">
+            <strong>Website</strong>
+            <span>Products and company info</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://www.facebook.com/people/ARROW-Electronic/61579793288302/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.02 10.12 11.93v-8.43H7.08v-3.5h3.04V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.31l-.53 3.5h-2.78V24C19.61 23.09 24 18.1 24 12.07Z"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>Facebook</strong>
+            <span>ARROW Electronic</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://www.tiktok.com/@arrowryan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16.6 0c.17 1.4 1 2.78 2.06 3.73 1.06.96 2.45 1.47 3.92 1.52v3.06a9.2 9.2 0 0 1-3.8-.81v7.29c0 4.48-3.63 8.11-8.11 8.11S2.56 19.27 2.56 14.79s3.63-8.11 8.11-8.11c.37 0 .73.03 1.08.08v3.98a4.51 4.51 0 0 0-1.08-.13 4.19 4.19 0 0 0 0 8.38c2.23 0 4.08-1.75 4.19-3.95V0h1.74Z"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>TikTok</strong>
+            <span>@arrowryan</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </section>
+
+      <section class="contact-box" aria-label="Direct contact">
+        <small>Direct Contact</small>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <small>WhatsApp</small>
+            <a href="https://wa.me/19122206761" target="_blank" rel="noreferrer">+1 912 220 6761</a>
+            <button class="copy-button" type="button" data-copy="+19122206761">Copy Number</button>
+          </div>
+          <div class="contact-item">
+            <small>Email</small>
+            <a href="mailto:ryan@china-speakers.com">ryan@china-speakers.com</a>
+            <button class="copy-button" type="button" data-copy="ryan@china-speakers.com">Copy Email</button>
+          </div>
+        </div>
+        <div class="accent-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll("[data-copy]");
+
+      async function copyValue(button) {
+        const text = button.getAttribute("data-copy");
+        const original = button.textContent;
+
+        try {
+          await navigator.clipboard.writeText(text);
+          button.dataset.copied = "true";
+          button.textContent = "Copied";
+          window.setTimeout(() => {
+            button.dataset.copied = "false";
+            button.textContent = original;
+          }, 1600);
+        } catch (_error) {
+          button.textContent = "Copy failed";
+          window.setTimeout(() => {
+            button.textContent = original;
+          }, 1600);
+        }
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => copyValue(button));
+      });
+    </script>
+  </body>
+</html>
